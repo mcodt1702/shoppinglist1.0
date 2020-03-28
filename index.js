@@ -1,6 +1,11 @@
 //first thing is to set the event listeners in place
 
-const STORE = []
+const STORE = [
+  {id: cuid(), name: "apples", checked: false},
+  {id: cuid(), name: "oranges", checked: false},
+  {id: cuid(), name: "milk", checked: true},
+  {id: cuid(), name: "bread", checked: false}
+];
 
 function addItemToShoppingList(itemName){
     console.log(`Adding a ${itemName} to shopping list`);
@@ -116,6 +121,7 @@ renderShoppingList();
 
 
 function handleShoppingList() {
+  renderShoppingList();
   addItem();
   handleDeleteButton()
   handleToggleButton()
